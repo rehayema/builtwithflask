@@ -1,0 +1,13 @@
+{%extends "layout.html"%}
+
+{% block title %} Hello World! {%endblock%}
+
+{%block body%}   
+<h2>Hi {{name}}</h2>
+    <h1>Your random number is  {{number}}!</h1>
+    {% if number == 1 %}
+        <h3>Your coin flip is HEADS.</h3>
+    {% else %}
+        <h3>Your coin flip is TAILS.</h3>
+    {% endif %}
+{%endblock%}

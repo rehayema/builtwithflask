@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+
+{%block body%}
+<h1>Add a New Task</h1>
+<form action="/add" method="post">
+    <input id="task" name="task" type="text" placeholder="Task Name">
+    <input id="submit" type="submit" disabled>
+</form>
+<script>
+    //disable submit button if task field is empty
+    document.querySelector('#task').onkeyup = function() {
+        if (document.querySelector('#task').value === '') {
+            document.querySelector('#submit').disabled = true;
+        }else {
+            document.querySelector('#submit').disabled = false;
+        }
+    }
+
+</script>
+<a href="/add">Create a new Task</a>
+{%endblock%}
